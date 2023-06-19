@@ -1,4 +1,8 @@
 function solution(arr) {
-    let min = [...arr].sort((a,b) => a - b)[0]
-    return arr.length === 1 ? [-1] : arr.filter(elem => elem !== min)
+    let idx = 0;
+    arr.map((_, i) => {
+        if (arr[i] < arr[i+1]) idx = i
+    })
+    arr.splice(idx, 1);
+    return arr
 } 
