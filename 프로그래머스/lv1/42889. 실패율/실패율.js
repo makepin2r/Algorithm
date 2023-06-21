@@ -7,7 +7,7 @@ function solution(N, stages) {
     }
     stages.forEach(v => {
         // 마지막 스테이지 클리어한 데이터 제외
-        if(v <= N) answer.set(v, answer.get(v) + 1) // 여기가 이상허다
+        if(v <= N) answer.set(v, answer.get(v) + 1)
     })
 
     for(let [k,v] of answer){
